@@ -1,0 +1,68 @@
+.body {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+}
+
+.stopwatch {
+  border: 1vmin dotted #000;
+  border-radius: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vmin;
+  height: 80vmin;
+  display: flex;
+  position: relative;
+}
+
+.stopwatch__sec-hand {
+  transform-origin: bottom;
+  background: url("pngwing.com.e6f72808.png") 0 0 / 100% 100%;
+  border-radius: 50% 50% 0 0;
+  width: 1.5vmin;
+  height: 38vmin;
+  animation: 10s linear infinite round;
+  position: absolute;
+  top: 2vmin;
+}
+
+.stopwatch__min-hand {
+  transform-origin: bottom;
+  background: url("pngwing.com.e6f72808.png") 0 0 / 100% 100%;
+  border-radius: 50% 50% 0 0;
+  width: 3vmin;
+  height: 20vmin;
+  animation: 600s steps(60, end) infinite round;
+  position: absolute;
+  top: 20vmin;
+}
+
+.stopwatch__center {
+  background-color: #000;
+  border-radius: 50%;
+  width: 5vmin;
+  height: 5vmin;
+  position: absolute;
+}
+
+@keyframes round {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.stopwatch--speed-up .stopwatch__sec-hand {
+  animation-duration: 10s;
+}
+
+.stopwatch--speed-up .stopwatch__min-hand {
+  animation-duration: 600s;
+}
+/*# sourceMappingURL=index.e378193d.css.map */
